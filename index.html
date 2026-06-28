@@ -48,6 +48,7 @@
 
     <div class="max-w-3xl mx-auto p-4 sm:p-6">
         
+        <!-- Header -->
         <header class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 sm:p-8 mb-6 relative overflow-hidden border border-slate-100">
             <div class="absolute -top-16 -right-16 w-32 h-32 bg-gradient-to-br from-app-secondary to-app-primary rounded-full opacity-10 blur-2xl"></div>
             
@@ -76,6 +77,7 @@
             </div>
         </header>
 
+        <!-- Nav -->
         <nav class="mb-8 -mx-4 px-4 sm:mx-0 sm:px-0 relative">
             <div class="flex gap-3 overflow-x-auto pb-4 scrollbar-hide snap-x items-center w-full after:content-[''] after:shrink-0 after:w-2">
                 <button data-target="profileContent" class="nav-tab active-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-gradient-to-r from-app-secondary to-app-primary text-white font-bold whitespace-nowrap shadow-md transition-all flex items-center gap-2">
@@ -85,7 +87,7 @@
                     <i data-lucide="bar-chart-2" class="w-5 h-5"></i> שיאים
                 </button>
                 <button data-target="trainingContent" class="nav-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-white text-slate-600 font-bold whitespace-nowrap hover:bg-slate-50 transition-all border border-slate-200 flex items-center gap-2">
-                    <i data-lucide="dumbbell" class="w-5 h-5"></i> תוכנית
+                    <i data-lucide="dumbbell" class="w-5 h-5"></i> תוכנית אימונים
                 </button>
                 <button data-target="nutritionContent" class="nav-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-white text-slate-600 font-bold whitespace-nowrap hover:bg-slate-50 transition-all border border-slate-200 flex items-center gap-2">
                     <i data-lucide="apple" class="w-5 h-5"></i> תזונה
@@ -116,10 +118,10 @@
 
                     <div class="bg-blue-50 rounded-3xl shadow-sm p-6 border border-blue-100 flex flex-col">
                         <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
-                            <i data-lucide="brain-circuit" class="text-blue-500 w-5 h-5"></i> דגשים למאמן (דן)
+                            <i data-lucide="brain-circuit" class="text-blue-500 w-5 h-5"></i> דגשים למאמן
                         </h3>
                         <p class="text-blue-800 text-sm leading-relaxed">
-                            האימון עם דן הוא קריטי לפידבק, דיוקים והצבת מטרות. המפתח הוא הקפדה על טכניקה ועלייה הדרגתית במשקלים.
+                            יהלי נמצא בשלב התחלה. התוכנית מבוססת על עבודה עקבית של 3 פעמים בשבוע. המפתח הוא הקפדה על טכניקה ועלייה הדרגתית במשקלים. האימון עם דן הוא קריטי לפידבק, דיוקים והצבת מטרות.
                         </p>
                     </div>
                 </div>
@@ -145,19 +147,21 @@
                                 <tr><td class="px-6 py-3 font-semibold text-slate-800">חתירה מוט</td><td class="px-6 py-3 font-bold text-app-primary">35</td><td class="px-6 py-3">8</td></tr>
                                 <tr><td class="px-6 py-3 font-semibold text-slate-800">פולי עליון מכונה</td><td class="px-6 py-3 font-bold text-app-primary">45 (כל צד)</td><td class="px-6 py-3">6</td></tr>
                                 <tr><td class="px-6 py-3 font-semibold text-slate-800">מקבילים</td><td class="px-6 py-3 font-bold text-app-primary">-</td><td class="px-6 py-3">6</td></tr>
-                                <tr><td class="px-6 py-3 font-semibold text-slate-800">הרחקות כתפיים</td><td class="px-6 py-3 font-bold text-app-primary">6</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">הרחקות כתפיים משקולות</td><td class="px-6 py-3 font-bold text-app-primary">6</td><td class="px-6 py-3">6</td></tr>
                                 <tr><td class="px-6 py-3 font-semibold text-slate-800">סקוואט מוט</td><td class="px-6 py-3 font-bold text-app-primary">35</td><td class="px-6 py-3">6</td></tr>
-                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפת ברכיים</td><td class="px-6 py-3 font-bold text-app-primary">8</td><td class="px-6 py-3">6</td></tr>
-                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפת מרפקים (כומר)</td><td class="px-6 py-3 font-bold text-app-primary">20</td><td class="px-6 py-3">8</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפה ברכיים (שכיבה)</td><td class="px-6 py-3 font-bold text-app-primary">8</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפת מרפקים כומר מכונה</td><td class="px-6 py-3 font-bold text-app-primary">20</td><td class="px-6 py-3">8</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
 
+            <!-- 3. Training Plan -->
             <div id="trainingContent" class="tab-pane hidden animate-fade-in space-y-6">
                 
-                <div class="grid grid-cols-1 gap-4 mb-8">
+                <!-- Training Notes -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-indigo-50 p-5 rounded-2xl border border-indigo-100">
                         <h4 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4"></i> נשימה וברייסינג</h4>
                         <p class="text-indigo-800 text-xs leading-relaxed">טכניקת ברייס! להוציא אוויר כשמושך או דוחף. לקחת אוויר במתיחה ותמיד לשמור על בטן מכווצת חזק.</p>
@@ -166,121 +170,21 @@
                         <h4 class="font-bold text-orange-900 mb-2 flex items-center gap-2"><i data-lucide="thermometer" class="w-4 h-4"></i> חימום</h4>
                         <p class="text-orange-800 text-xs leading-relaxed">לבצע חימום בהדרגה עד למשקל העבודה (1-3 סטים חימום לפני סטי העבודה).</p>
                     </div>
-                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 col-span-1 md:col-span-2">
                         <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4"></i> מנוחות ועצימות</h4>
                         <p class="text-slate-600 text-xs leading-relaxed">לנוח בין סטים לפחות דקה. לא להיכנס לסט אם עדיין שורף או עייפים. לעבוד 1-2 חזרות לפני כשל.</p>
                     </div>
                 </div>
                 
-                <div class="space-y-4">
-                    <!-- Bench -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">בנץ' (Bench Press)</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>שכב עם קשת טבעית, כתפיים נעוצות ויציבות ברפד</li>
-                            <li>הורד את המוט לחזה התחתון (קו הפטמות) בזווית מרפקים של כ-45-75 מעלות מהגוף</li>
-                            <li>לחץ תוך "שבירת המוט" לצדדים</li>
-                            <li>אל תנעל מרפקים לגמרי — שמור מתח</li>
-                        </ul>
-                    </div>
-
-                    <!-- Row -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">חתירה מוט</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>גב שטוח ועמוד שדרה ניטרלי</li>
-                            <li>משוך את המוט לכיוון החזה התחתון (לא בטן תחתונה!)</li>
-                            <li>לחץ שכמות יחד בפסגה וקבע לשנייה</li>
-                            <li>הורד בשליטה (נגטיב זה חצי מהעבודה)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Pulldown -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">פולי עליון מכונה</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>שב זקוף, הטה גוף מעט לאחור (10-15 מעלות)</li>
-                            <li>התחל בדיכאון שכמות, לא בכיפוף מרפקים</li>
-                            <li>משוך לחזה העליון ("מרפקים לכיסאות אחוריים")</li>
-                            <li>ידיים הן "ווים"</li>
-                        </ul>
-                    </div>
-
-                    <!-- Dips -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">מקבילים</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>לחזה: הטיה קדימה, מרפקים פתוחים, רד עמוק</li>
-                            <li>לטריצפס: גוף זקוף, מרפקים קרובים</li>
-                            <li>אל תנעל מרפקים</li>
-                        </ul>
-                    </div>
-
-                    <!-- Lat Raises -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">הרחקות כתפיים</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>כיפוף קל קבוע במרפק (15-20 מעלות)</li>
-                            <li>הרם עד גובה כתף בדיוק</li>
-                            <li>בפסגה: הטיית אגודל מעט למטה</li>
-                            <li>שלוט בירידה (2-3 שניות)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Squat -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">סקוואט מוט</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>ירידה כאילו יושב על כיסא מאחוריך</li>
-                            <li>ברכיים עוקבות קו אצבעות</li>
-                            <li>עלה תוך לחיצת רצפה ו"פתיחת" ברכיים</li>
-                        </ul>
-                    </div>
-
-                    <!-- Leg Curl -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">כפיפת ברכיים</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>ירכיים דחוסות ברפד — לא להרים</li>
-                            <li>כפוף ל-90+ מעלות וקבע שנייה</li>
-                            <li>נגטיב מבוקר (2-3 שניות)</li>
-                        </ul>
-                    </div>
-
-                    <!-- Preacher Curl -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
-                        <div class="flex justify-between items-center mb-3">
-                            <h4 class="font-black text-slate-800 text-lg">כפיפת מרפקים (כומר)</h4>
-                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
-                        </div>
-                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
-                            <li>אל תנעל מרפקים לגמרי (שמור מתח)</li>
-                            <li>סופינציה (סיבוב כף יד) לפסגה</li>
-                            <li>ירידה מבוקרת, ללא תנופה</li>
-                        </ul>
-                    </div>
-
+                <div class="space-y-3">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">בנץ</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">חתירה מוט</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">פולי עליון מכונה</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">מקבילים</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">הרחקות כתפיים</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">סקוואט מוט</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">כפיפת ברכיים</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 flex items-center justify-between"><span class="font-bold text-slate-800">כפיפת מרפקים (כומר)</span><span class="text-sm font-semibold text-slate-500">3 סטים | 5-10 חזרות</span></div>
                 </div>
             </div>
 
