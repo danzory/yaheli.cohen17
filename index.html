@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>פרופיל אישי - יהלי כהן</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Assistant', 'sans-serif'],
+                    },
+                    colors: {
+                        app: {
+                            bg: '#f8fafc',
+                            primary: '#3b82f6', 
+                            secondary: '#60a5fa', 
+                            dark: '#1e3a8a',
+                            text: '#334155'
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Assistant', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-app-text antialiased pb-24 selection:bg-app-primary selection:text-white">
+
+    <div class="max-w-3xl mx-auto p-4 sm:p-6">
+        
+        <header class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 sm:p-8 mb-6 relative overflow-hidden border border-slate-100">
+            <div class="absolute -top-16 -right-16 w-32 h-32 bg-gradient-to-br from-app-secondary to-app-primary rounded-full opacity-10 blur-2xl"></div>
+            
+            <div class="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-right">
+                <div class="relative">
+                    <div class="w-28 h-28 rounded-full bg-slate-200 p-1 shadow-sm">
+                        <div class="w-full h-full bg-white rounded-full flex items-center justify-center border-4 border-white overflow-hidden">
+                            <img src="https://ui-avatars.com/api/?name=יהלי+כהן&background=3b82f6&color=fff&size=128&bold=true" alt="תמונת פרופיל" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex-1 mt-2">
+                    <h1 class="text-3xl font-black text-slate-800 tracking-tight">יהלי כהן</h1>
+                    <p class="text-app-primary font-semibold text-lg mt-1">בונים מסת שריר וכוח 🚀</p>
+                    
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mt-4">
+                        <span class="inline-flex items-center gap-1.5 bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium px-3 py-1.5 rounded-xl">
+                            <i data-lucide="scale" class="w-4 h-4"></i> משקל: 61 ק"ג
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-slate-100 text-slate-600 text-sm font-medium px-3 py-1.5 rounded-xl">
+                            <i data-lucide="calendar" class="w-4 h-4"></i> בן 17
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="mb-8 -mx-4 px-4 sm:mx-0 sm:px-0 relative">
+            <div class="flex gap-3 overflow-x-auto pb-4 scrollbar-hide snap-x items-center w-full after:content-[''] after:shrink-0 after:w-2">
+                <button data-target="profileContent" class="nav-tab active-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-gradient-to-r from-app-secondary to-app-primary text-white font-bold whitespace-nowrap shadow-md transition-all flex items-center gap-2">
+                    <i data-lucide="user-circle" class="w-5 h-5"></i> פרופיל
+                </button>
+                <button data-target="progressContent" class="nav-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-white text-slate-600 font-bold whitespace-nowrap hover:bg-slate-50 transition-all border border-slate-200 flex items-center gap-2">
+                    <i data-lucide="bar-chart-2" class="w-5 h-5"></i> שיאים
+                </button>
+                <button data-target="trainingContent" class="nav-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-white text-slate-600 font-bold whitespace-nowrap hover:bg-slate-50 transition-all border border-slate-200 flex items-center gap-2">
+                    <i data-lucide="dumbbell" class="w-5 h-5"></i> תוכנית
+                </button>
+                <button data-target="nutritionContent" class="nav-tab snap-center shrink-0 px-6 py-3 rounded-2xl bg-white text-slate-600 font-bold whitespace-nowrap hover:bg-slate-50 transition-all border border-slate-200 flex items-center gap-2">
+                    <i data-lucide="apple" class="w-5 h-5"></i> תזונה
+                </button>
+            </div>
+        </nav>
+
+        <main id="contentPanes" class="relative pb-10">
+            
+            <!-- 1. Profile -->
+            <div id="profileContent" class="tab-pane block animate-fade-in space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white rounded-3xl shadow-sm p-6 border border-slate-100">
+                        <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i data-lucide="info" class="text-app-primary w-5 h-5"></i> תעודת זהות מתאמן
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-600">
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0"><i data-lucide="target" class="w-4 h-4"></i></div>
+                                <div><span class="block text-xs text-slate-400">מטרת על</span><span class="font-semibold text-slate-700">גדילה במסת שריר וכוח</span></div>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 shrink-0"><i data-lucide="activity" class="w-4 h-4"></i></div>
+                                <div><span class="block text-xs text-slate-400">תדירות אימונים</span><span class="font-semibold text-slate-700">3 בשבוע (2 עצמאי, 1 עם איתי)</span></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 rounded-3xl shadow-sm p-6 border border-blue-100 flex flex-col">
+                        <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
+                            <i data-lucide="brain-circuit" class="text-blue-500 w-5 h-5"></i> דגשים למאמן (דן)
+                        </h3>
+                        <p class="text-blue-800 text-sm leading-relaxed">
+                            האימון עם דן הוא קריטי לפידבק, דיוקים והצבת מטרות. המפתח הוא הקפדה על טכניקה ועלייה הדרגתית במשקלים.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Progress -->
+            <div id="progressContent" class="tab-pane hidden animate-fade-in space-y-8">
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 bg-slate-50">
+                        <h2 class="text-xl font-bold text-slate-800">שיאים נוכחיים</h2>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-right text-slate-600">
+                            <thead class="text-xs text-slate-500 uppercase bg-slate-50">
+                                <tr>
+                                    <th class="px-6 py-4 font-bold">תרגיל</th>
+                                    <th class="px-6 py-4 font-bold">משקל (ק"ג)</th>
+                                    <th class="px-6 py-4 font-bold">חזרות</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-50">
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">בנץ</td><td class="px-6 py-3 font-bold text-app-primary">45</td><td class="px-6 py-3">5</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">חתירה מוט</td><td class="px-6 py-3 font-bold text-app-primary">35</td><td class="px-6 py-3">8</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">פולי עליון מכונה</td><td class="px-6 py-3 font-bold text-app-primary">45 (כל צד)</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">מקבילים</td><td class="px-6 py-3 font-bold text-app-primary">-</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">הרחקות כתפיים</td><td class="px-6 py-3 font-bold text-app-primary">6</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">סקוואט מוט</td><td class="px-6 py-3 font-bold text-app-primary">35</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפת ברכיים</td><td class="px-6 py-3 font-bold text-app-primary">8</td><td class="px-6 py-3">6</td></tr>
+                                <tr><td class="px-6 py-3 font-semibold text-slate-800">כפיפת מרפקים (כומר)</td><td class="px-6 py-3 font-bold text-app-primary">20</td><td class="px-6 py-3">8</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trainingContent" class="tab-pane hidden animate-fade-in space-y-6">
+                
+                <div class="grid grid-cols-1 gap-4 mb-8">
+                    <div class="bg-indigo-50 p-5 rounded-2xl border border-indigo-100">
+                        <h4 class="font-bold text-indigo-900 mb-2 flex items-center gap-2"><i data-lucide="wind" class="w-4 h-4"></i> נשימה וברייסינג</h4>
+                        <p class="text-indigo-800 text-xs leading-relaxed">טכניקת ברייס! להוציא אוויר כשמושך או דוחף. לקחת אוויר במתיחה ותמיד לשמור על בטן מכווצת חזק.</p>
+                    </div>
+                    <div class="bg-orange-50 p-5 rounded-2xl border border-orange-100">
+                        <h4 class="font-bold text-orange-900 mb-2 flex items-center gap-2"><i data-lucide="thermometer" class="w-4 h-4"></i> חימום</h4>
+                        <p class="text-orange-800 text-xs leading-relaxed">לבצע חימום בהדרגה עד למשקל העבודה (1-3 סטים חימום לפני סטי העבודה).</p>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4"></i> מנוחות ועצימות</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">לנוח בין סטים לפחות דקה. לא להיכנס לסט אם עדיין שורף או עייפים. לעבוד 1-2 חזרות לפני כשל.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- Bench -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">בנץ' (Bench Press)</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>שכב עם קשת טבעית, כתפיים נעוצות ויציבות ברפד</li>
+                            <li>הורד את המוט לחזה התחתון (קו הפטמות) בזווית מרפקים של כ-45-75 מעלות מהגוף</li>
+                            <li>לחץ תוך "שבירת המוט" לצדדים</li>
+                            <li>אל תנעל מרפקים לגמרי — שמור מתח</li>
+                        </ul>
+                    </div>
+
+                    <!-- Row -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">חתירה מוט</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>גב שטוח ועמוד שדרה ניטרלי</li>
+                            <li>משוך את המוט לכיוון החזה התחתון (לא בטן תחתונה!)</li>
+                            <li>לחץ שכמות יחד בפסגה וקבע לשנייה</li>
+                            <li>הורד בשליטה (נגטיב זה חצי מהעבודה)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pulldown -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">פולי עליון מכונה</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>שב זקוף, הטה גוף מעט לאחור (10-15 מעלות)</li>
+                            <li>התחל בדיכאון שכמות, לא בכיפוף מרפקים</li>
+                            <li>משוך לחזה העליון ("מרפקים לכיסאות אחוריים")</li>
+                            <li>ידיים הן "ווים"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dips -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">מקבילים</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>לחזה: הטיה קדימה, מרפקים פתוחים, רד עמוק</li>
+                            <li>לטריצפס: גוף זקוף, מרפקים קרובים</li>
+                            <li>אל תנעל מרפקים</li>
+                        </ul>
+                    </div>
+
+                    <!-- Lat Raises -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">הרחקות כתפיים</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>כיפוף קל קבוע במרפק (15-20 מעלות)</li>
+                            <li>הרם עד גובה כתף בדיוק</li>
+                            <li>בפסגה: הטיית אגודל מעט למטה</li>
+                            <li>שלוט בירידה (2-3 שניות)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Squat -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">סקוואט מוט</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>ירידה כאילו יושב על כיסא מאחוריך</li>
+                            <li>ברכיים עוקבות קו אצבעות</li>
+                            <li>עלה תוך לחיצת רצפה ו"פתיחת" ברכיים</li>
+                        </ul>
+                    </div>
+
+                    <!-- Leg Curl -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">כפיפת ברכיים</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>ירכיים דחוסות ברפד — לא להרים</li>
+                            <li>כפוף ל-90+ מעלות וקבע שנייה</li>
+                            <li>נגטיב מבוקר (2-3 שניות)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Preacher Curl -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="font-black text-slate-800 text-lg">כפיפת מרפקים (כומר)</h4>
+                            <span class="text-sm font-bold text-app-primary">3 סטים | 5-10 חזרות</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                            <li>אל תנעל מרפקים לגמרי (שמור מתח)</li>
+                            <li>סופינציה (סיבוב כף יד) לפסגה</li>
+                            <li>ירידה מבוקרת, ללא תנופה</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 4. Nutrition -->
+            <div id="nutritionContent" class="tab-pane hidden animate-fade-in">
+                <div class="bg-white rounded-3xl shadow-sm border border-slate-100 p-12 text-center">
+                    <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="lock" class="w-8 h-8"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-2">תוכנית תזונה בבנייה</h2>
+                    <p class="text-slate-500 text-sm">התוכנית תיפתח בקרוב מאוד. המשך לעבוד חזק באימונים!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            const activeTabs = document.querySelectorAll('.active-tab');
+            const navTabs = document.querySelectorAll('.nav-tab');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    navTabs.forEach(t => {
+                        t.classList.remove('bg-gradient-to-r', 'from-app-secondary', 'to-app-primary', 'text-white', 'shadow-md');
+                        t.classList.add('bg-white', 'text-slate-600');
+                    });
+                    panes.forEach(p => p.classList.add('hidden'));
+                    
+                    tab.classList.remove('bg-white', 'text-slate-600');
+                    tab.classList.add('bg-gradient-to-r', 'from-app-secondary', 'to-app-primary', 'text-white', 'shadow-md');
+                    
+                    const targetId = tab.getAttribute('data-target');
+                    const targetPane = document.getElementById(targetId);
+                    if(targetPane) targetPane.classList.remove('hidden');
+                    
+                    tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
